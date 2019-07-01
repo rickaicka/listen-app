@@ -1,21 +1,29 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<div id="wrapper" [perfectScrollbar]="config">
+    <lst-loader [showLoader]="isLoading"></lst-loader>
+    <lst-sidebar></lst-sidebar>
+    <main id="pageWrapper">
+        <lst-header></lst-header>
+        <div>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo, leo et posuere interdum, neque nibh porttitor velit, et porta ante turpis sit amet lacus. Cras placerat porta lacus cursus ultricies. Sed facilisis eget sem sit amet consectetur. Sed vel odio diam. Nam ligula leo, tristique eget tristique a, dictum sit amet tortor. Sed sodales non lorem quis consequat. Aenean luctus, nulla in ullamcorper tempor, mauris enim sollicitudin ante, quis faucibus ipsum tortor vel massa. Phasellus vel elementum dolor. Donec imperdiet urna lacus, vel commodo quam posuere sit amet. Proin id dignissim massa. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
 
-<router-outlet></router-outlet>
+                Nulla eu est risus. Fusce viverra, risus at auctor venenatis, nunc lorem eleifend turpis, vitae iaculis mi magna quis diam. Donec sed consequat nulla, sit amet accumsan leo. Mauris eget nulla tincidunt, tincidunt diam sed, pretium purus. In vitae condimentum leo. Donec ut auctor erat. Cras eu auctor tortor. Sed ipsum dolor, sagittis eget turpis sed, consequat mattis erat. Donec efficitur nulla sed lectus porta gravida. Duis varius blandit est scelerisque placerat. Maecenas sodales feugiat metus quis molestie. Etiam lobortis porttitor pellentesque. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas porttitor nulla mauris, tincidunt laoreet sapien fringilla eleifend. Fusce porttitor finibus tellus, quis tincidunt quam vulputate nec. Cras vulputate erat a ante ullamcorper, et fermentum lacus cursus.
+                
+                Aliquam dapibus, metus vitae accumsan fringilla, risus mauris posuere enim, sit amet hendrerit ex libero eget erat. Maecenas dictum turpis sed augue lacinia aliquam. Donec sit amet leo rutrum, aliquam magna id, congue diam. Duis venenatis quis ex non viverra. In hac habitasse platea dictumst. Cras nunc sem, condimentum in arcu cursus, lacinia aliquam leo. Nulla vel vehicula turpis, eget malesuada lacus. Donec viverra erat augue, vitae consectetur tellus maximus sit amet. Curabitur ac dui ultricies, efficitur turpis eget, malesuada ante. Nam rhoncus turpis vel ex ornare, id imperdiet risus varius. In eu tellus mollis, vestibulum lacus eu, ullamcorper dui. Donec eu lacus ultricies, sagittis nisl eget, tincidunt odio.
+                
+                Quisque id elementum felis. Vestibulum scelerisque sem sed nunc vulputate pulvinar. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi orci ex, pharetra eget leo nec, fermentum mollis leo. In consectetur facilisis euismod. Etiam et lobortis libero. Quisque mollis risus sed gravida lacinia. Nulla interdum est rhoncus purus tempor dignissim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Praesent fringilla lobortis lacus, quis dignissim turpis. Nullam semper tincidunt lectus in convallis. Aenean sit amet bibendum tellus, ac tincidunt odio. In nec nulla eget risus blandit volutpat. Phasellus justo nibh, tempus at dui eget, bibendum luctus dui.
+                
+                Integer in arcu vestibulum, bibendum libero at, luctus orci. Curabitur eu tellus lacinia ligula sodales ultrices eu quis leo. Aliquam rutrum augue elit, sit amet convallis dolor laoreet ut. Nam venenatis, orci sed scelerisque tincidunt, nunc diam vestibulum purus, eget consequat ligula purus eu quam. Nullam imperdiet dui porttitor lectus bibendum lobortis. Nunc congue ipsum a sollicitudin cursus. Nullam at rhoncus odio. Nulla ac arcu semper, suscipit magna non, vehicula nulla. Nam sit amet lacus id nisl egestas luctus. Proin est ipsum, tincidunt eu rhoncus in, lobortis non neque. Nulla vitae nisl non dui tempus fringilla.
+                
+                Suspendisse vitae enim ut lorem lacinia venenatis sit amet in tellus. Ut at nunc quis nunc dictum tempus. Phasellus vel egestas nunc, eu rhoncus mi. Nunc vel dui metus. Donec nisi diam, vehicula vel felis a, ornare sollicitudin massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum a rutrum sapien, at molestie ligula. Sed tempor velit nibh, consequat feugiat tortor gravida vel. Mauris consequat condimentum pretium. Integer id quam felis. Cras sagittis dolor eu augue tempus, sed consequat lectus fringilla. Mauris ut nunc vulputate, molestie velit non, vulputate massa.
+                
+                Morbi efficitur, libero ac ultrices auctor, nibh augue ultrices felis, in rutrum ex dolor non eros. Phasellus maximus sem eget condimentum lacinia. Suspendisse pretium non neque in lobortis. Quisque varius faucibus commodo. Quisque tempus orci in lacus finibus sodales. Quisque eget tortor vitae odio commodo volutpat a a justo. Suspendisse at urna vehicula, aliquet est non, pellentesque magna. Donec volutpat at magna ac euismod. Donec sed dapibus neque. Maecenas feugiat odio at dui efficitur pretium. Pellentesque lectus magna, aliquam et arcu vel, tincidunt auctor turpis.
+                
+                Vestibulum ac nulla dolor. In fermentum iaculis orci, eu mattis lorem dictum in. Aenean quis justo fringilla, imperdiet ipsum et, luctus nibh. Morbi vitae sapien tempor, mattis leo nec, laoreet elit. Sed vehicula vitae ante eu iaculis. Cras velit quam, elementum ut tristique vitae, malesuada vel felis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam ut aliquet ligula. Nunc fringilla sem purus, rutrum euismod leo luctus nec. Donec sapien nulla, congue at aliquet eget, fermentum sed nulla.
+                
+                In finibus ante nec commodo feugiat. Proin varius bibendum diam, sit amet laoreet massa vulputate in. Suspendisse in eros et velit rhoncus faucibus. Sed ac ex lacus. Fusce eu auctor mi. Nulla eleifend aliquet augue vestibulum lobortis. Sed laoreet at urna eu viverra. Nullam iaculis velit odio, in pretium nisl accumsan a. Pellentesque facilisis mattis dignissim. Fusce ultricies iaculis nisl, nec pulvinar dolor commodo vel. Duis imperdiet velit nisi, at condimentum enim gravida sed. Vestibulum a sapien porttitor, rhoncus ante ac, sagittis orci. Pellentesque at quam ullamcorper, malesuada augue bibendum, semper arcu. Phasellus et risus nec justo pharetra feugiat id vel arcu.
+                
+                Aliquam eget dignissim mauris, nec molestie felis. Maecenas sit amet lacus blandit, tempus lectus non, fringilla metus. In odio velit, posuere at nibh eget, luctus feugiat odio. Etiam mi odio, molestie id porttitor ut, semper nec nibh. Aenean dapibus, elit quis egestas tristique, turpis tellus viverra erat, vitae rutrum sapien dolor sit amet eros. Vivamus nec pellentesque ipsum, sit amet commodo urna. Proin nec ex ligula. Duis semper arcu vel magna pulvinar, ut pulvinar neque rutrum. Donec dapibus lorem nisl, nec faucibus mauris tempor eget. 
+        </div>
+        <router-outlet></router-outlet>
+    </main>
+</div>
