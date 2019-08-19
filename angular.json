@@ -131,6 +131,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "listen-app"
+    }
+  },
+  "defaultProject": "listen-app",
+  "cli": {
+    "defaultCollection": "akita-schematics"
+  }
 }
