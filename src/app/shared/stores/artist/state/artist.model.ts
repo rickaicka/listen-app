@@ -1,15 +1,19 @@
-import { ID } from '@datorama/akita';
+import { ID, guid } from '@datorama/akita';
 import { Image } from 'src/app/shared/models/image.interface';
 
-export interface Artist {
+export class Artist {
   id: ID;
   name: string;
-  genres: Array<string>;
-  href: string;
-  images: Array<Image>;
+  genres: string[];
+  href: '';
+  images: Image[];
   popularity: number;
   type: string;
   uri: string;
+}
+
+export class ArtistList {
+  artists: Artist[];
 }
 
 /**
@@ -17,6 +21,19 @@ export interface Artist {
  */
 export function createArtist(params: Partial<Artist>) {
   return {
-
+    id: guid(),
+    name: '',
+    genres: [],
+    href: '',
+    images: [],
+    popularity: 0,
+    type: '',
+    uri: ''
   } as Artist;
+}
+
+export function createListArtist(params: Partial<ArtistList>) {
+  return {
+    artists: []
+  } as ArtistList;
 }

@@ -1,1 +1,19 @@
-<p>home works!</p>
+<form [formGroup]="artistForm" >
+    <input type="text" formControlName="name"> 
+    <input type="text" formControlName="genres"> 
+    <input type="text" formControlName="href"> 
+    <input type="text" formControlName="images"> 
+    <input type="text" formControlName="popularity"> 
+    <input type="text" formControlName="type"> 
+    <input type="text" formControlName="uri"> 
+
+    <button type="submit" (click)="add()">Enviar</button>
+
+
+    <div  *ngFor="let item of artists$">
+        <p>
+            {{item.name}}
+        </p>
+        <button (click)="getDetails(item.id)">trocar</button>
+    </div>
+</form>

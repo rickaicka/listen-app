@@ -1,6 +1,8 @@
 import { Component, OnInit, Renderer2, HostListener, ElementRef, ViewChild } from '@angular/core';
 import { fromEvent } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { ArtistQuery } from '../../stores/artist/state/artist.query';
+import { ArtistService } from '../../stores/artist/state/artist.service';
 
 @Component({
   selector: 'lst-header',
@@ -8,7 +10,14 @@ import { map } from 'rxjs/operators';
 })
 export class HeaderComponent implements OnInit {
   @ViewChild('drop', {static: true}) elRefs: ElementRef;
-  constructor(private renderer: Renderer2, private eRef: ElementRef) { }
+
+  artists$;
+
+  constructor(
+    private renderer: Renderer2,
+    private eRef: ElementRef,
+    private artistQuery: ArtistQuery,
+    private artistService: ArtistService) { }
 
   showLogin = false;
 
@@ -17,6 +26,7 @@ export class HeaderComponent implements OnInit {
 
   openSearch() {
     this.renderer.addClass(document.body, 'open-search');
+    this.artists$ = this.artistQuery.getAll();
   }
 
   openModalLogin() {

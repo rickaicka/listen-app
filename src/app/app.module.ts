@@ -5,6 +5,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { HttpClientModule } from '@angular/common/http';
+import { AkitaNgDevtools } from '@datorama/akita-ngdevtools';
+import { 
+  HttpMethod, 
+  NG_ENTITY_SERVICE_CONFIG, 
+  NgEntityServiceGlobalConfig 
+} from '@datorama/akita-ng-entity-service';
 
 @NgModule({
   declarations: [
@@ -16,7 +22,12 @@ import { HttpClientModule } from '@angular/common/http';
     SharedModule.forRoot(),
     HttpClientModule
   ],
-  providers: [],
+  providers: [{
+    provide: NG_ENTITY_SERVICE_CONFIG,
+    useValue: {
+      baseUrl: 'https://api.spotify.com/v1'
+    }
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

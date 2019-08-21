@@ -9,6 +9,7 @@ import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
 import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
 import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { AkitaNgDevtools } from '@datorama/akita-ngdevtools';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   wheelSpeed: 0.5,
@@ -28,7 +29,8 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     FormsModule,
     ReactiveFormsModule,
     PerfectScrollbarModule,
-    SlickCarouselModule
+    SlickCarouselModule,
+    AkitaNgDevtools.forRoot(),
   ],
   exports: [
     LoaderComponent,
@@ -37,7 +39,8 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     ReactiveFormsModule,
     HeaderComponent,
     SidebarComponent,
-    PerfectScrollbarModule
+    PerfectScrollbarModule,
+    AkitaNgDevtools
   ]
 })
 

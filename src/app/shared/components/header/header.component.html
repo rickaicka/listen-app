@@ -18,11 +18,11 @@
                     <hr>
                     <!-- Begin | Result List -->
                     <div class="row">
-                        <div class="col-xl-2 col-md-4 col-6">
+                        <div class="col-xl-2 col-md-4 col-6" *ngFor="let item of artists$">
                             <div class="custom-card mb-3">
                                 <a href="artist-details.html" class="text-dark">
                                     <img src="../assets/images/cover/medium/1.jpg" alt="" class="card-img--radius-md">
-                                    <p class="text-truncate mt-2">Arebica Luna</p>
+                                    <p class="text-truncate mt-2">{{item.name}}</p>
                                 </a>
                             </div>
                         </div>
