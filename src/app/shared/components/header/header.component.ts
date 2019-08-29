@@ -26,7 +26,16 @@ export class HeaderComponent implements OnInit {
 
   openSearch() {
     this.renderer.addClass(document.body, 'open-search');
+    this.renderer.addClass(this.renderer.selectRootElement('.header-backdrop'), 'show');
     this.artists$ = this.artistQuery.getAll();
+  }
+
+  openSidebar($e){
+    $e.stopPropagation();
+    this.renderer.removeClass(document.body, 'open-search');
+    this.renderer.addClass(document.body, 'open-sidebar');
+    this.renderer.addClass(this.renderer.selectRootElement('.sidebar-backdrop'), 'show');
+    this.renderer.removeClass(this.renderer.selectRootElement('.header-backdrop'), 'show');
   }
 
   openModalLogin() {
@@ -38,6 +47,7 @@ export class HeaderComponent implements OnInit {
     if (!this.eRef.nativeElement.contains(event.target)) {
       const el = this.eRef.nativeElement.querySelector('.dropdown');
       this.renderer.removeClass(document.body, 'open-search');
+      this.renderer.removeClass(this.renderer.selectRootElement('.header-backdrop'), 'show');
       this.renderer.removeClass(el, 'show');
     }
   }

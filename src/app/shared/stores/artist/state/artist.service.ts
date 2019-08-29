@@ -29,7 +29,7 @@ export class ArtistService {
 
   getArtists() {
     const headerSettings: {[name: string]: string | string[]; } = {};
-    headerSettings['Authorization'] = 'Bearer BQCWFJkve9WSbgifVaE0X7ZL4UxXChRBEuX4YwBkkG9WGMh-QkDgene-cKM_4Jnof1LAMTkQ7cLbLCwTjrA6ZOTf3q3dW4ZNrjkalwWtD8TzqRxKVF6Pemwts2y1GOFzVtom0NWYZ4iy6B0QE-C_Z3JKmSco0vKfDUoh3TPXN9xDlH0wQEGwaga8axz4OgCy32WDIiR9_Itl6o6QteEf0JOm1Uv1psM2gN1r5vxM1wIJ-3EaUWzQWLB6j-jw4A25NosPiagPsILBuzg';
+    headerSettings['Authorization'] = 'Bearer BQCyhYkYuFgPdTxtleqoAW6u3a-PzZatyD1PKvssHdH-96p84gkjPri0Ln9sv7z2adLH9mXWf3Zq_2yoJ7yguxSYe8Wiw7MZE3rRKZiK7rOb8MygnCbBcIBU8RuRvhchky4suAV2YRln22btI1rJX1lh3JWze948Nzkvw-ayhzkUm1TM8EYwwKHKy1Q-Klrng45jzSvdMEkN6bPlflrpZxMvBZ31jozI4zzKNaxc4SVD9CiDBOzC65FnRZsja0R9cZtajBrqUCai6KE';
     const newHeader = new HttpHeaders(headerSettings);
     let newParams = new HttpParams().set('ids', '2CIMQHirSU0MQqyYHq0eOx,57dN52uHvrHOxijzpIgu3E,1vCWHaC5f2uS3yhpwWbIA6');
     this.http.get<ArtistList>('https://api.spotify.com/v1/artists', {params: newParams, headers: newHeader}).subscribe((req: ArtistList) => {

@@ -1,19 +1,64 @@
-<form [formGroup]="artistForm" >
-    <input type="text" formControlName="name"> 
-    <input type="text" formControlName="genres"> 
-    <input type="text" formControlName="href"> 
-    <input type="text" formControlName="images"> 
-    <input type="text" formControlName="popularity"> 
-    <input type="text" formControlName="type"> 
-    <input type="text" formControlName="uri"> 
+<div class="banner bg-home"></div>
 
-    <button type="submit" (click)="add()">Enviar</button>
+<div class="main-container" id="appRoute">
+    <div class="section">
+        <div class="heading">
+            <div class="d-flex flex-wrap align-items-end">
+                <div class="flex-grow-1">
+                    <h4>Top Charts</h4>
+                    <p>Listen top chart</p>
+                </div>
+                <a href="songs.html" class="btn btn-sm btn-pill btn-air btn-primary">View All</a>
+            </div>
+            <hr>
+        </div>
+        <ngx-slick-carousel
+            class="carousel-item-5 arrow-pos-3" 
+            [config]="slideConfig" >
+            <div ngxSlickItem *ngFor="let slide of slides" class="custom-card">
+                <div class="custom-card--img">
+                    <div class="custom-card--info">
+                        <ul class="custom-card--labels d-flex">
+                            <li><span class="badge badge-pill badge-warning"><i class="la la-star"></i></span></li>
+                        </ul>
+                        <div class="dropdown dropdown-icon">
+                            <a href="javascript:void(0);" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="ion-md-more"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-right">
+                                <li class="dropdown-item">
+                                    <a href="javascript:void(0);" class="dropdown-link favorite">
+                                        <i class="la la-heart-o"></i>
+                                    </a>
+                                </li>
+                                <li class="dropdown-item">
+                                    <a href="javascript:void(0);" class="dropdown-link">
+                                        <i class="la la-plus"></i>
+                                    </a>
+                                </li>
+                                <li class="dropdown-item">
+                                    <a href="javascript:void(0);" class="dropdown-link">
+                                        <i class="la la-download"></i>
+                                    </a>
+                                </li>
+                                <li class="dropdown-item">
+                                    <a href="javascript:void(0);" class="dropdown-link">
+                                        <i class="la la-share-alt"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <a href="javascript:void(0);" class="external" data-audio='{"name": "I Love You Mummy", "artist": "Arebica Luna", "album": "Mummy", "url": "../assets/audio/ringtone-1.mp3", "cover_art_url": "../assets/images/cover/small/1.jpg"}'>
+                        <img src="../assets/images/cover/large/1.jpg" alt="I Love You Mummy" class="card-img--radius-lg">
+                    </a>
+                </div>
 
-
-    <div  *ngFor="let item of artists$">
-        <p>
-            {{item.name}}
-        </p>
-        <button (click)="getDetails(item.id)">trocar</button>
+                <a href="song-details.html" class="custom-card--link mt-2">
+                    <h6>I Love You Mummy</h6>
+                    <p>Arebica Luna</p>
+                </a>
+            </div>
+        </ngx-slick-carousel>
     </div>
-</form>
+</div>

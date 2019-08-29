@@ -29,6 +29,7 @@
     "jquery": "^3.4.1",
     "jquery-countdown-timer": "^0.1.0",
     "jquery.cookie": "^1.4.1",
+    "lib-daruix": "0.0.1",
     "line-awesome": "github:icons8/line-awesome",
     "moment": "^2.24.0",
     "ngx-perfect-scrollbar": "^8.0.0",

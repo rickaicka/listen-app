@@ -4,9 +4,6 @@ import { Routes } from '@angular/router';
 import { HomeRoutingModule } from './home-routing.module';
 import { SharedModule } from '../shared/shared.module';
 
-const routes: Routes = [
-  { path: '', component: HomeComponent },
-];
 
 @NgModule({
   imports: [

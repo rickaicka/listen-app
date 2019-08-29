@@ -28,7 +28,7 @@
     @for $i from 1 through 3 {
         &.arrow-pos-#{$i} {
             .btn {
-                top: $pos#{'%'};
+                top: $pos*1%;
             }
         }
         $pos: $pos - 5;

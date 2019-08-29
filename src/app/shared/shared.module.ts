@@ -10,6 +10,7 @@ import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
 import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { AkitaNgDevtools } from '@datorama/akita-ngdevtools';
+import { LibDaruixModule } from 'lib-daruix';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   wheelSpeed: 0.5,
@@ -31,6 +32,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     PerfectScrollbarModule,
     SlickCarouselModule,
     AkitaNgDevtools.forRoot(),
+    LibDaruixModule
   ],
   exports: [
     LoaderComponent,
@@ -40,7 +42,9 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     HeaderComponent,
     SidebarComponent,
     PerfectScrollbarModule,
-    AkitaNgDevtools
+    AkitaNgDevtools,
+    LibDaruixModule,
+    SlickCarouselModule
   ]
 })
 
