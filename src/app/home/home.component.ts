@@ -8,6 +8,7 @@ import { ArtistService } from '../shared/stores/artist/state/artist.service';
 import { createArtist, Artist } from '../shared/stores/artist/state/artist.model';
 import { HttpHeaders, HttpParams } from '@angular/common/http';
 import { ArtistStore } from '../shared/stores/artist/state/artist.store';
+import { LoginService } from '../shared/stores/login/state/login.service';
 
 @Component({
   selector: 'lst-home',
@@ -34,9 +35,13 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewChecked {
     private builder: FormBuilder,
     private artistQuery: ArtistQuery,
     private artistStore: ArtistStore,
-    private artistService: ArtistService) { }
+    private artistService: ArtistService,
+    private loginService: LoginService) { }
 
   ngOnInit() {
+
+    this.loginService.addLogin();
+
     this.artistForm = this.builder.group({
       id: Math.floor(Math.random() * 20),
       name: this.builder.control(''),
